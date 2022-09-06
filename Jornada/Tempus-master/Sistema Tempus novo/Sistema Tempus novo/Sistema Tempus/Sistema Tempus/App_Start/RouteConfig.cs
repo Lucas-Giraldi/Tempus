@@ -24,7 +24,18 @@ namespace Sistema_Tempus
           defaults: new { controller = "Home", action = "Index" }
       );
 
+            routes.MapRoute(
+                name: "cadastrar",
+                url: "cadastrar",
+                defaults: new { controller = "Home", action = "Manager" }
 
+            );
+
+            routes.MapRoute(
+                name: "editar",
+                url: "editar/{id}",
+                defaults: new { controller = "Home", action = "Manager" }
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
